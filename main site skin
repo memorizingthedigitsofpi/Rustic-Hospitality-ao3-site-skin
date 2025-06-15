@@ -90,14 +90,14 @@ p.kudos,
   display: none;
 }
 
-/* This puts an image in place of what we just removed */
+/* This puts an image in place of what we just removed. You can change the size of this image by changing the px values */
 #header h1.heading a::before {
   display: inline-block;
-  width: 297px;
-  height: 120px;
+  width: 198px;
+  height: 80px;
   content: " ";
   background-image: url("https://64.media.tumblr.com/3490946870753ec2da8151d0a03821c7/4de1ee9fd5a137f1-5e/s2048x3072/0094297bbf4da3b61e43e0c657fdbc89df5c11cb.png");
-  background-size: 297px 120px;
+  background-size: 198px 80px;
 }
 
 /* This changes the background for the header bar from red to reddish brown. It also removes the box-shadow that gives the default header that kinda 3D look */
@@ -112,6 +112,15 @@ p.kudos,
   border: 1px solid #fcd39f;
   border-radius: 5px;
   background: #a78155;
+}
+
+/* This sets how wide the dropdown menus are when they are open */
+#greeting .menu {
+  width: 12em !important;
+}
+
+#header .menu {
+  width: 20em;
 }
 
 
