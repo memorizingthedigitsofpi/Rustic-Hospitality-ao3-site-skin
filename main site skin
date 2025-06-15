@@ -1,0 +1,834 @@
+/* WEBPAGE DEFAULTS */
+
+/* This sets the background for the website page */
+#outer {
+  background: #1c0b03;
+}
+
+
+/* This adds the flourish graphic to the right hand side of the page. You can change the size of that graphic by changing the 20% to another number. You can remove the graphic entirely by deleting this section of code. */
+#inner {
+  background: url("https://64.media.tumblr.com/7f60e5aad10098f12a4f5f84aa0c2f1f/4de1ee9fd5a137f1-44/s1280x1920/b9d477edba7d6cf7fad99e1d34ef6cd7c9705fcb.png");
+  background-size: 20%;
+  background-position: right;
+  background-repeat: repeat-y;
+}
+
+
+/* This sets the default colour for text */
+#main {
+  color: #ffd9ba;
+}
+
+
+/* This sets the default colour for links. Because this is now the default, I'll have to override this in any places I want to change the link colour. I can do that by adding !important after the hex colour code. */
+#main a {
+color: #a78155;
+}
+
+#main a:hover {
+  background: rgba(253, 146, 110, 50%);
+  color: #1b0a02;
+}
+
+/* This specifically changes the colour of a link that you've visited when that link is the title of a fic in a blurb */
+.blurb h4.heading a:visited {
+color: #703620 !important;
+}
+
+
+/* The home page has various headings (e.g. Find Your Favourites, News) and this removes the underline from them and changes the colour of the text */
+.splash .module h3 {
+  border-bottom: none;
+  color: #fd926e;
+}
+
+
+/* There is a line between each of the news stories. This removes that line. */
+.splash .news li {
+  border-bottom: none;
+}
+
+
+/* This changes the colours and borders on the twitter and tumblr buttons on the homepage */
+.resp-sharing-button--twitter,
+.resp-sharing-button--tumblr {
+  background: #703620 !important;
+  border: 1px solid #ffd9ba !important;
+  border-radius: 5px;
+}
+
+
+/* Some areas of the website have icons. This changes those default icons to a different image. You can get the defaults back by deleting this section */
+.skins .primary .icon,
+.tag .primary .icon {
+  background: url("https://64.media.tumblr.com/7bfa9b48720c8aa5edb3e41e72e1a05e/4de1ee9fd5a137f1-af/s400x600/2838f03eda848f064af0a777d3ff24025ec3e29f.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+p.kudos,
+.index .skins .icon {
+  background: url("https://64.media.tumblr.com/7bfa9b48720c8aa5edb3e41e72e1a05e/4de1ee9fd5a137f1-af/s400x600/2838f03eda848f064af0a777d3ff24025ec3e29f.png");
+  background-size: 55px 55px;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/* HEADER */
+
+
+/* This removes the logo and the text "Archive of Our Own beta" from the top left of the header */
+#header .logo,
+#header .heading sup {
+  display: none;
+}
+
+#header h1.heading span {
+  display: none;
+}
+
+/* This puts an image in place of what we just removed */
+#header h1.heading a::before {
+  display: inline-block;
+  width: 297px;
+  height: 120px;
+  content: " ";
+  background-image: url("https://64.media.tumblr.com/3490946870753ec2da8151d0a03821c7/4de1ee9fd5a137f1-5e/s2048x3072/0094297bbf4da3b61e43e0c657fdbc89df5c11cb.png");
+  background-size: 297px 120px;
+}
+
+/* This changes the background for the header bar from red to reddish brown. It also removes the box-shadow that gives the default header that kinda 3D look */
+#header .primary {
+  background: #703620;
+  box-shadow: none;
+}
+
+
+/* This puts a border around your icon next to your username. It also changes the shape of your icon to a rounded square, and if your icon's background is transparent it sticks a background behind it */
+#greeting img.icon {
+  border: 1px solid #fcd39f;
+  border-radius: 5px;
+  background: #a78155;
+}
+
+
+/* This hides the search button. To get it back, delete this section */
+#header #search .button,
+#header #search .submit {
+  display: none;
+}
+
+
+/* This makes the search box smaller (so that it fits nicely onto the same line as the header menu on mobile), changes the background and border. You can change the width of that bubble by changing the number of 6em. You can reset it to default by deleting the line width: 6em; */
+#header #search .text {
+  background: #866744;
+  color: #000;
+  width: 6em;
+  border: 1px solid #fcd39f;
+}
+
+
+/* This gets rid of the light grey shadow at the top of the search bubble when you're typing in it */
+form.search input[type="text"] {
+  box-shadow: none;
+}
+
+
+/* When you click into the search bubble, a little box shows up underneath it with info about how to search. This changes how that looks. If you'd rather hide that little box instead dele all of the stuff inside of the brackets and just type in display: none; */
+.search [role="tooltip"] {
+  background: #703620;
+  border: 1px solid #fcd39f;
+  color: #fcd39f;
+  border-radius: 5px;
+}
+
+
+/* This is all of the styling for the header menu and dropdowns */
+#header .menu,
+#header a.dropdown-toggle,
+#greeting .user > li:nth-of-type(3) a {
+  background: #866744;
+  border: 1px solid #fcd39f;
+  font-weight: bold;
+  color: #fcd39f !important;
+  font-variant-caps: all-petite-caps;
+  border-radius: 5px;
+  margin-right: 5px;
+  box-shadow: none;
+}
+
+#header .menu li a {
+  color: #fcd39f !important;
+  border: none !important;
+  font-weight: normal;
+}
+
+#header .menu li {
+  border-bottom: none;
+}
+
+/* This is just a note to myself that this is the thing that I can never find that sets the colour of the header dropdown trigger's background when the dropdown is open */
+#header .dropdown:hover a {
+  background: #866744;
+}
+
+
+
+
+/* ERRORS, NOTICES, ALERTS, ETC */
+
+/* This sets the background and text colour of the notices and messages that you'll see sometimes on AO3 */
+.notice,
+.comment_notice,
+.kudos_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.kudos_error,
+.alert.flash,
+.LV_invalid {
+  background: #703620;
+  border: 1px solid #fcd39f;
+  box-shadow: none;
+  color: #ffd9ba;
+}
+
+
+/* This changes the colour of links in those messages */
+.notice a,
+.comment_notice a,
+.kudos_notice a,
+ul.notes a,
+.caution a,
+.error a,
+.comment_error a,
+.kudos_error a,
+.alert.flash a {
+  color: #fd926e !important;
+}
+
+
+/* This hides the banner that tells you that you have muted some users on the Archive (those users will still be muted, you just won't see the banner) */
+p.muted.notice {
+  display: none;
+}
+
+
+
+
+/* FORMS */
+
+
+/* Forms on AO3 are boxes inside of boxes, and you can change the background colours of all of those various boxes. This part changes the outer box to a brassy gradient colour and a border that matches the header dropdowns */
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff {
+  background: #a78155;
+  border: 1px solid #fcd39f;
+  box-shadow: none;
+}
+
+
+/* This changes the inner box of those forms to a reddish brown that matches the background of the header links, and it is lighter than the background of the entire page */
+fieldset dl,
+fieldset.actions,
+fieldset dl fieldset dl,
+fieldset fieldset,
+fieldset dl dl,
+form blockquote.userstuff {
+  background: #703620;
+}
+
+
+/* This is specifically for the inside box in the filters sidebar. It removes the outer border and the red background we set right above this */
+form#work-filters fieldset dl {
+border: none;
+background: transparent !important;
+}
+
+
+/* Also specifically for the filters sidebar - this changes the text colour of the link at the very bottom of the form that clears the filters you've already entered */
+p.footnote a {
+color: #1b0a02 !important;
+}
+
+
+/* This changes the text boxes that you type into (eg. when writing a fic or a comment) before you type into it so that it has the same brassy gradient as the outer form box */
+input,
+textarea,
+select {
+  background: #866744;
+  color: #fcd39f;
+  border: 1px solid #fcd39f;
+  box-shadow: none;
+}
+
+
+/* This changes the background on those same text boxes when you click into them in order to type */
+input:focus,
+select:focus,
+textarea:focus,
+.autocomplete div.dropdown ul {
+  background: #703620;
+  color: #fcd39f;
+}
+
+
+/* This removes a border that I didn't like */
+form dt {
+  border-bottom: none;
+}
+
+
+/* You are required to fill out certain parts of forms. This sets the text colour of the names of those sections (e.g. Archive Warnings) */
+.required,
+.error,
+.alert.flash {
+  color: #fd926e;
+}
+
+
+/* This changes the text colour of the required parts of themselves (e.g. the names of the Archive Warnings listed in the New Work posting form) */
+.post .required .warnings,
+dd.required,
+form dd.required {
+  color: #ffd9ba;
+}
+
+
+/* Form sections have a box at the top left telling you what that section is. This changes the background and text colour of those boxes */
+form.verbose legend,
+.verbose form legend {
+  background: #a78155;
+  border: 1px solid #ffd9ba;
+  box-shadow: none;
+}
+
+
+/* This changes the text colour of the required labels when that label is in a box indicating a section. The red on top of the green had too little contrast. */
+legend.required {
+  color: #ffd9ba;
+}
+
+
+/* When you click into a box to type into it, it sometimes has a message giving you a hint (e.g. when adding a relationship tag to a new work). This removes the white background and the box shadow behind it and changes the font from dark grey to match the rest of the skin */
+body,
+.secondary,
+.dropdown {
+  background: none;
+  color: #ffd9ba;
+}
+
+
+/* This is a fix for a persistent white background that kept showing when I edited bookmarks. It might affect other things? but I haven't noticed anything */
+.toggled form,
+.dynamic form {
+  border: none;
+  background: transparent;
+  color: #ffd9ba;
+  box-shadow: none;
+}
+
+div.dynamic {
+  background: transparent;
+}
+
+.required .autocomplete,
+.autocomplete .notice {
+  color: #ffd9ba;
+}
+
+form .notice,
+form ul.notes {
+  box-shadow: none;
+}
+
+
+/* This sets the border and background on the section of your bookmark that says when you bookmarked it and what your bookmark comment is (if you added one) */
+.bookmark .user {
+  border: 1px solid #703620;
+  background: rgba(253, 146, 110, 20%);
+}
+
+
+/* Your History page includes a line for each blurb that tells you how many times you have visited a fic and whether it has updated recently etc. This removes the background from that and changes the text colour */
+.reading h4.viewed {
+background: transparent;
+color: #fd926e;
+}
+
+
+/* Your subscriptions page places a background behind each subscription. This removes that background */
+dl.index dd {
+background: none;
+}
+
+
+/* Forms (and various other areas of the site) have icons with question marks in them that users can click on to get help. This changes the colour of those question mark bubbles */
+span.question {
+  background: #1b0a02;
+  color: #ffd9ba;
+  font-weight: normal;
+  border: 2px solid #ffd9ba;
+  box-shadow: none;
+}
+
+
+/* This changes the border colours in the block and mute users form */
+form.single fieldset {
+border: 2px solid #703620;
+}
+
+.picture .header {
+border: none;
+}
+
+
+/* When you click on things and a pop up appears with information? Yeah, this changes those colours */
+#modal {
+  background: #1b0a02;
+  border: 2px solid #703620;
+  box-shadow: none;
+}
+
+#modal .content {
+  border-bottom: 1px solid #703620;
+}
+
+#modal.img a {
+  color: #a78155;
+}
+
+#modal.img .content img {
+  border: 1px solid #703620;
+    box-shadow: none;
+}
+
+
+
+/* LISTS */
+
+
+/* Another area of the website that is built as boxes inside of boxes are the various lists. These include the Fandoms pages, the Tags landing pages, your dashboard list of works etc. This sets the background colours for the boxes as well as the text colour for the headers */
+.listbox, 
+fieldset fieldset.listbox {
+  background: #703620;
+  border: 2px solid #ffd9ba;
+  box-shadow: none;
+}
+
+.listbox .index {
+  background: #1b0a02;
+  box-shadow: none;
+}
+
+.listbox > .heading,
+.listbox .heading a:visited {
+  color: #ffd9ba;
+}
+
+
+/* This changes the border colour around each work blurb */
+li.blurb {
+border: 2px solid #703620;
+}
+
+
+/* When you're looking at the alphabetized list of fandoms in a category, there is an arrow-up button next to each section. This sets the text colour for the arrow inside of that button */
+span.action.top a {
+color: #ffd9ba !important;
+}
+
+
+/* The top of your profile page has some of your info in a box. This changes the colour of that border */
+dl.meta {
+border: 2px solid #703620;
+}
+
+
+/* And this removes the box shadow behind it */
+.wrapper {
+box-shadow: none;
+}
+
+
+
+
+/* TABLES */
+
+
+/* Just a lot of backgrounds and borders really */
+table,
+.child {
+background: transparent;
+}
+
+thead, 
+tfoot,
+tbody tr {
+  border-bottom: 2px solid #703620;
+}
+
+tfoot td {
+  border-top: 1px solid #703620;
+}
+
+thead td {
+  background: #703620;
+  border-bottom: 1px solid #703620;
+}
+
+th, 
+tr:hover, 
+col.name {
+  background: #703620;
+  border: 1px solid #703620;
+}
+
+
+/* Sign Ups pages have tables too and this makes them readable! Feel free to modify to better suit your needs */
+tbody tr th {
+background: transparent;
+}
+
+span.requested,
+span.offered {
+color: #ffd9ba;
+}
+
+
+
+
+/* BUTTONS */
+
+
+/* This sets the background colour, font colour, and the shadow underneath the buttons */
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+.actions button,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label {
+  background: #a78155;
+  color: #ffd9ba !important;
+  border: 1px solid #ffd9ba !important;
+  background-image: none;
+  box-shadow: 3px 3px 3px #7c4510;
+}
+
+
+/* This determines what buttons look like when you hover over them */
+.actions a:hover,
+.actions button:hover,
+.actions input:hover,
+.actions a:focus,
+.actions button:focus,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:focus {
+  background: #703620;
+  color: #001b19;
+  border: 1px solid #ffd9ba !important;
+  box-shadow: none;
+}
+
+
+/* This determines what buttons look like when you're on the page they lead to  (eg. if you're on page 4 of a tag then the button labelled 4 will look like this) */
+.actions a:active,
+.current,
+a.current,
+a:link.current,
+.current a:visited {
+  color: #001b19;
+  background: #703620;
+  border-color: #ffd9ba;
+  box-shadow: none;
+}
+
+
+
+
+
+/* COMMENTS */
+
+
+/* This removes the background from comments, so they share the background of the website. It also changes the colour of the outer border */
+div.comment,
+li.comment {
+  background: none;
+  border: 1px solid #ffd9ba;
+}
+
+
+/* Icons in comments have a grey border at the bottom of them. This changes that colour. It also adds a thinner border on the right */
+.comment div.icon {
+border-bottom: 5px solid #a78155;
+border-right: 1px solid #a78155;
+}
+
+
+/* The top of a comment box shows the name of the person who wrote the comment (and the fic that it's on, if you see the comment in your inbox). This changes the background colour of that section of the comment */
+.comment h4.byline {
+background: #703620;
+}
+
+
+/* In the default skin, every-other comment on a fic has a light grey background. This changes that colour */
+.thread .even {
+  background: #431e0f;
+}
+
+
+/* In your inbox, there is a "button" (it's not actually a button, but it looks like one) next to the reply and select buttons that tells you if a comment is unread. This styles that "button" */
+span.unread {
+background: #fd926e;
+color: #1b0a02;
+border: 1px solid #1b0a02;
+}
+
+
+/*  In your inbox, there is a "button" next to the reply and select buttons that tells you that you have replied to a comment. This styles that "button" */
+.replied {
+background: #a78155;
+  border: 1px solid #ffd9ba;
+color: #ffd9ba;
+}
+
+
+
+
+
+/* TAGS */
+
+
+/* This separates tags and puts each tag in its own little box with rounded borders */
+a.tag,
+a.tag:visited,
+a.tag:link {
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 2px 0px;
+  border-radius: 5px;
+}
+
+
+/* This removes the commas from in between tags */
+.commas li:after {
+  content: "";
+}
+
+
+/* This changes the background colour and text colour of the Archive Warning tags in the fic's blurb */
+.warnings .tag {
+  background: #873816;
+  color: #ffd9ba !important;
+  border: 1px solid #873816;
+}
+
+
+/* This switches the background colour and the text colour when you hover over the Archive Warnings tags */
+.warnings .tag:hover {
+  background: #1b0a02 !important;
+  color: #873816 !important;
+  border: 1px solid #1b0a02;
+}
+
+
+/* The rest of the tag stuff is just repeating the stuff I did for warnings, but setting specific colours for each type of tag in the fic blurb */
+.relationships .tag {
+  background: #837741;
+  color: #ffd9ba !important;
+  border: 1px solid #837741;
+}
+
+.relationships .tag:hover {
+  background: #1b0a02 !important;
+  color: #837741 !important;
+  border: 1px solid #1b0a02;
+}
+
+.characters .tag {
+  background: #6A6F73;
+  color: #ffd9ba !important;
+  border: 1px solid #6A6F73;
+}
+
+.characters .tag:hover {
+  background: #1b0a02 !important;
+  color: #6A6F73 !important;
+  border: 1px solid #1b0a02;
+}
+
+.freeforms .tag {
+  background: #8C6E0E;
+  color: #ffd9ba !important;
+  border: 1px solid #8C6E0E;
+}
+
+.freeforms .tag:hover {
+  background: #1b0a02 !important;
+  color: #8C6E0E !important;
+  border: 1px solid #1b0a02;
+}
+
+
+/* While I was at it, I changed the colours of the little square of 4 icons that you can see on fic blurbs */
+span.rating-general-audience.rating,
+span.category-gen.category,
+span.complete-yes.iswip {
+  filter: sepia(30%) saturate(40%);
+}
+
+span.rating-teen.rating {
+  filter: hue-rotate(340deg) saturate(50%) contrast(120%);
+}
+
+span.category-slash.category {
+  filter: brightness(160%) saturate(10%);
+}
+
+span.category-het.category {
+  filter: brightness(150%) saturate(40%) contrast(80%);
+}
+
+span.category-multi.category {
+  filter: brightness(120%) saturate(40%);
+}
+
+span.rating-mature.rating,
+span.warning-choosenotto.warnings {
+  filter: saturate(70%);
+}
+
+span.rating-notrated.rating,
+span.category-none.category,
+span.warning-no.warnings {
+  filter: brightness(0) saturate(100%) invert(6%) sepia(52%) saturate(815%) hue-rotate(337deg) brightness(91%) contrast(102%);
+}
+
+span.rating-explicit.rating,
+span.category-femslash.category,
+span.warning-yes.warnings,
+span.complete-no.iswip {
+  filter: hue-rotate(20deg) contrast(80%) saturate(80%);
+}
+
+
+
+/* If you've favourited any tags, they show up on the website home page. This sets the background colour of every-other tag */
+.splash .favorite li:nth-of-type(odd) a {
+  background: #703620 !important;
+  color: #ffd9ba !important;
+}
+
+/* This sets the background colour when you hover over any of those tags */
+.splash .favorite li a:hover, 
+.splash .favorite li a:focus,
+.splash .favorite li:nth-of-type(2n+1) a:hover, 
+.splash .favorite li:nth-of-type(2n+1) a:focus {
+  background: #ffd9ba;
+}
+
+
+
+/* STATS PAGE */
+
+
+/* This changes the colour of the chart on your stats page. The chart itself is an svg file, so the only way to change the colours is to apply filters to it. I spent about 40 minutes on getting it to this point and I figured this was as close as I was going to get. Enjoy! */
+#stat_chart svg {
+  filter: invert(90%) sepia(150%) brightness(70%) hue-rotate(340deg) saturate(220%);
+}
+
+.statistics .index li:nth-of-type(2n) {
+  background: transparent;
+}
+
+
+
+/* DRAFTS */
+
+
+/* This changes the background of the draft to a semi-transparent red */
+.draft,
+.draft .wrapper {
+background: rgba(253, 146, 110, 20%);
+}
+
+
+/* this changes the border colour to match the rest of the site skin */
+.draft {
+border: 2px dashed #ffd9ba;
+}
+
+
+
+
+
+/* DASHBOARD MENU */
+
+
+/* Your dashboard menu has a thick red border at the top and the bottom. This sets the colour of that as well as the dash menu as well */
+#dashboard.own {
+  background: rgba(253, 146, 110, 10%);
+  border-top: 15px solid #703620;
+  border-bottom: 15px solid #703620;
+}
+
+
+/* This styles the option for the page that you're currently on */
+#dashboard .current {
+  background: #703620;
+}
+
+
+/* This styles what the options look like when you hover over them with your mouse */
+#dashboard a:hover {
+  background: rgba(253, 146, 110, 50%);
+}
+
+
+/* up above in the buttons section of this site skin, I added a border around links. This removes that border for the dashboard menu */
+#dashboard a {
+border: none !important;
+}
+
+
+/* Sections of the menu are separated by a line. This removes that line */
+#dashboard ul {
+  border-top: none;
+}
+
+
+
+
+
+/* FOOTER */
+
+
+/* This removes the red background (which is an image) and changes the color of the white border at the top */
+#footer {
+  background: none;
+  border-top: 3px solid #703620;
+}
+
+
+/* This sets the text colour of the headers in the footer, and it removes a border from around the links that ended up there because it shares code with some of the buttons */
+#footer .heading,
+#footer li,
+#footer li a{
+  color: #fd926e;
+  border: none !important;
+}
